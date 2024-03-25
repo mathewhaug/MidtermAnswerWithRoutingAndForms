@@ -1,0 +1,34 @@
+<header>
+  <h2>Add Personal</h2>
+</header> <!--force unwrapping because angular wanted me too -->
+<form [formGroup] = 'form!'
+(ngSubmit)="onSubmit(form!.value)">
+  <ul>
+    <li>
+      <label for="job">Job</label>
+      <select name="job" id="job" formControlName="job">
+        <option value="teacher">Teacher</option>
+        <option value="student">Student</option>
+      </select>
+    </li>
+    <li>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" formControlName="name">
+    </li>
+    <li>
+      <label for="category">Position</label>
+      <select name="category" id="category" formControlName="category">
+        <option value="Programming">Programming</option>
+        <option value="Networking">Networking</option>
+
+      </select>
+    </li>
+    <li>
+      <label for="year">Graduation Year</label>
+      <input type="text" name="year" id="year" maxlength="4" formControlName="year">
+    </li>
+  </ul>
+  <button type="submit">Save</button>
+</form>
+
+
