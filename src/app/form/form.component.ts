@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule, FormBuilder} from "@angular/forms";
 import {FormGroup, FormControl} from "@angular/forms";
+import {Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -14,7 +15,20 @@ import {FormGroup, FormControl} from "@angular/forms";
 })
 export class FormComponent {
   //We need to create a form group
-  form: FormGroup | undefined
+  //form: FormGroup | undefined
+
+  newMediaItem = this.formBuilder.group({
+    name: '',
+    category: '',
+    year: '',
+    job: ''
+
+  })
+  constructor(private formBuilder : FormBuilder,
+              private router: Router
+   ){
+
+  }
 
   /*
   FormGroup expects to be called with an object structure
@@ -22,16 +36,21 @@ export class FormComponent {
   set the value of each property to a new instance of FormControl
    */
 
-  ngOnInit(){
+  /*ngOnInit(){
     this.form=new FormGroup({
       job: new FormControl('Teacher'),
       name: new FormControl(''),
       category: new FormControl('Programming'),
       year: new FormControl('')
     });
-  }
-  onSubmit(mediaItem: any){
-    console.log(mediaItem);
+  }*/
+  onSubmit(){
+    console.warn("Your order has been submitted");
+    //print just the name to the console
+    console.log(this.newMediaItem.value.name);
+    this.router.navigateByUrl('/'+this.newMediaItem.value.name)
+
+
   }
 
 }

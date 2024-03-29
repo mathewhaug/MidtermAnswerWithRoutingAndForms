@@ -1,8 +1,8 @@
 <header>
   <h2>Add Personal</h2>
 </header> <!--force unwrapping because angular wanted me too -->
-<form [formGroup] = 'form!'
-(ngSubmit)="onSubmit(form!.value)">
+<form [formGroup] = 'newMediaItem'
+(ngSubmit) = "onSubmit()">
   <ul>
     <li>
       <label for="job">Job</label>
@@ -28,7 +28,7 @@
       <input type="text" name="year" id="year" maxlength="4" formControlName="year">
     </li>
   </ul>
-  <button type="submit">Save</button>
+  <button type="submit">Submit</button>
 </form>
 
 
