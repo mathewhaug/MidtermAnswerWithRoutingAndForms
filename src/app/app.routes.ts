@@ -8,6 +8,6 @@ export const routes: Routes = [
   {path: 'page-not-found', component: PageNotFoundComponent},
   {path:'form',component: FormComponent},
 
-  {path:'**',redirectTo:'page-not-found',pathMatch:'full'}
+  {path:'**',redirectTo:'allStudents',pathMatch:'full'}
 
 ];

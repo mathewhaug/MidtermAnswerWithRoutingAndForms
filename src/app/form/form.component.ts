@@ -48,7 +48,7 @@ export class FormComponent {
     console.warn("Your order has been submitted");
     //print just the name to the console
     console.log(this.newMediaItem.value.name);
-    this.router.navigateByUrl('/'+this.newMediaItem.value.name)
+    this.router.navigateByUrl('/'+this.newMediaItem.value.job)
 
 
   }
