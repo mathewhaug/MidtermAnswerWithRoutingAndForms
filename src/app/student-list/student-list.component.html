@@ -1,5 +1,4 @@
 <app-student-details
-*ngFor = "let item of contentItems;
-index as i"
+*ngFor = "let item of (contentItems| contentTagged);"
 [contentItems]="item">
 </app-student-details>

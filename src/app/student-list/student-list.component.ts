@@ -3,13 +3,15 @@ import { StudentServiceService } from '../Services/student-service.service';
 import { Student } from '../models/student';
 import { StudentDetailsComponent} from "../student-details/student-details.component";
 import {NgForOf} from "@angular/common";
+import {ContentTaggedPipe} from "../Pipes/TaggedContent/content-tagged.pipe";
 
 @Component({
   selector: 'app-student-list',
   standalone: true,
   imports: [
     StudentDetailsComponent,
-    NgForOf
+    NgForOf,
+    ContentTaggedPipe
   ],
   templateUrl: './student-list.component.html',
   styleUrl: './student-list.component.css'

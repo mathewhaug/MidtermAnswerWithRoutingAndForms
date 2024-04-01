@@ -5,7 +5,7 @@ everywhere, so we should export right away
 
 export const CONTENT = [
   {
-    id:1,
+    id:41,
     studentName: "Matt Haug",
     courseCode: "MAD 400",
     dateOfBirth: "01/01/1990",
