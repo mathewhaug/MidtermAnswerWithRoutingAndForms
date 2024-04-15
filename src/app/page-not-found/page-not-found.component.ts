@@ -11,7 +11,7 @@ import {HighlightDirective} from "../Directives/highlight.directive";
     HighlightDirective
   ],
   templateUrl: './page-not-found.component.html',
-  styleUrl: './page-not-found.component.css'
+  styleUrl: './page-not-found.component.scss'
 })
 export class PageNotFoundComponent {
   colourFromTypescript = 'lightblue'

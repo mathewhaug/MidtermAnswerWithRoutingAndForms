@@ -6,7 +6,7 @@ import { Student } from '../models/student';
   standalone: true,
   imports: [],
   templateUrl: './student-details.component.html',
-  styleUrl: './student-details.component.css'
+  styleUrl: './student-details.component.scss'
 })
 export class StudentDetailsComponent {
   @Input() contentItems?: Student;

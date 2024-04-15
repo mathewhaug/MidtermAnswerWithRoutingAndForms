@@ -5,30 +5,41 @@
 (ngSubmit) = "onSubmit()">
   <ul>
     <li>
-      <label for="job">Job</label>
-      <select name="job" id="job" formControlName="job">
-        <option value="teacher">Teacher</option>
-        <option value="student">Student</option>
-      </select>
+      <mat-form-field appearance="fill">
+      <mat-label >Job</mat-label>
+      <mat-select  id="job" formControlName="job">
+        <mat-option value="teacher">Teacher</mat-option>
+        <mat-option value="student">Student</mat-option>
+      </mat-select>
+      </mat-form-field>
     </li>
     <li>
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name" formControlName="name">
+      <mat-form-field appearance="fill">
+      <mat-label>Full Name</mat-label>
+      <input matInput type="text" name="name" id="name" formControlName="name">
+      </mat-form-field>
     </li>
     <li>
-      <label for="category">Position</label>
-      <select name="category" id="category" formControlName="category">
-        <option value="Programming">Programming</option>
-        <option value="Networking">Networking</option>
+      <mat-form-field appearance="fill">
+      <mat-label >Position</mat-label>
+      <mat-select  id="category" formControlName="category">
+        <mat-option value="Programming">Programming</mat-option>
+        <mat-option value="Networking">Networking</mat-option>
 
-      </select>
+      </mat-select>
+      </mat-form-field>
     </li>
     <li>
-      <label for="year">Graduation Year</label>
-      <input type="text" name="year" id="year" maxlength="4" formControlName="year">
+      <mat-form-field appearance="fill">
+      <mat-label>Graduation Year</mat-label>
+      <input matInput type="text" name="year" id="year" maxlength="4" formControlName="year">
+      </mat-form-field>
     </li>
   </ul>
-  <button type="submit">Submit</button>
+
+    <button mat-raised-button color="warn" type="submit">Submit</button>
+
+
 </form>
 
 

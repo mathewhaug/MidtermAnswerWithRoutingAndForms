@@ -14,7 +14,7 @@ import {ContentTaggedPipe} from "../Pipes/TaggedContent/content-tagged.pipe";
     ContentTaggedPipe
   ],
   templateUrl: './student-list.component.html',
-  styleUrl: './student-list.component.css'
+  styleUrl: './student-list.component.scss'
 })
 export class StudentListComponent implements OnInit{
   content?: Student[];
